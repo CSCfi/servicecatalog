@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Service catalog - 0.0.2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Service catalog api">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@cscfi/csc-ui@2.1.11/dist/styles/css/theme.css">
+</head>
+<body>
+<c-main disable-layout>
+<c-page>
+    <c-toolbar class="relative">
+  <c-csc-logo></c-csc-logo>
+                  Service catalog
+        <c-spacer></c-spacer>
+</c-toolbar>
+
+            <h2>Service catalog API</h2>
+            <p>CSC Services Public API (toistaiseksi Beta)</p>
+    <p>
+    The CSC service catalog complies with the EOSC standard and the implementation of the FAIR principles (findable, accessible, interoperable, and reusable).
+</p>
+    <p>
+Features of content:
+        <ul>
+<li>Service persistent identifier PID and short name of service: Unique identifiers for quick access.</li>
+<li> Brief description of the functionality of the service</li>
+<li> Bilingual descriptions: Available in both Finnish and English, serving a wider audience.</li>
+<li> Access and Instructions for Use: Clear instructions on requirements, access to and use of services.</li>
+<li>Support & Contact Information: Direct links to support resources, user guide, and documentation.</li>
+    </ul>
+    <c-link href="model.html">Link to data model</c-link>
+</p>
+            <h3>The endPoint</h3>
+
+            <p>This page is served by Quarkus. The API end point is in
+                <code>/v1/services</code>. For example <c-link href="/v1/services/text">/v1/services/text</c-link>.</p>
+
+            <h2>What are your next steps?</h2>
+            <p>
+                Please study <c-link href="/q/openapi">the openapi specification of the program</c-link> to use it.
+
+            The questions of the program will answered 	servicedesk(<nospam>at)csc</nospam>.fi.
+            </p>
+            <!--div class="example-code"-->
+                <h3>Health and live</h3>
+                <p>Because you see this page app is very probably live, but you can ask about health</p>
+                <c-link href="/q/health/live">/q/health/live</c-link>
+
+                <h3>Application</h3>
+                <ul>
+                    <li>GroupId: <code>fi.csc.data</code></li>
+                    <li>ArtifactId: <code>palvelukatalog</code></li>
+                    <li>Version: <code>0.0.2</code></li>
+                    <li>Quarkus Version: <code>3.13.0</code></li>
+                </ul>
+
+
+
+</c-page>
+</c-main>
+                    <script src="https://cdn.jsdelivr.net/npm/@cscfi/csc-ui@2.1.11/dist/csc-ui/csc-ui.esm.js" type="module"></script>
+</body>
+</html>
