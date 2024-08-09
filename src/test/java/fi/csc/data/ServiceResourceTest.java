@@ -11,7 +11,7 @@ class ServiceResourceTest {
     @Test
     void testServiceEndpoint() {
         given()
-          .when().get("/v1/service")
+          .when().get("/v1/services/text")
           .then()
              .statusCode(200)
              ;

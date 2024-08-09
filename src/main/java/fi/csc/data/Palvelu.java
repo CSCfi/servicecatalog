@@ -26,87 +26,107 @@ import jakarta.persistence.Table;
  *     }
  * }
  */
+@org.hibernate.annotations.Immutable
 @Entity
 @Table(name = "D_Service_catalogue")
 public class Palvelu extends PanacheEntityBase {
     @Column(name = "Service_snowkey", unique = true, nullable = false)
     @Id
     public String key;
-    @Column(name = "Customer_Segment")
-    public String customer_segment;
-    @Column(name = "Description_in_English")
-public String description_in_english;
-    @Column(name = "Description_in_Finnish")
-public String description_in_finnish;
+    @Column(name = "URN")
+    public String urn;
+    @Column(name = "Short_Name")
+    public String short_name;
+    @Column(name = "Name_en")
+    public String name_en;
+    @Column(name = "Name_fi")
+    public String name_fi;
+    @Column(name = "Tagline_en")
+    public String tagline_en;
+    @Column(name = "Tagline_fi")
+    public String tagline_fi;
+    @Column(name = "Description_en")
+    public String description_en;
+    @Column(name = "Description_fi")
+    public String description_fi;
+     @Column(name = "Technical_requirements_en")
+public String technical_requirements_en;
+    @Column(name = "Technical_requirements_fi")
+public String technical_requirements_fi;
+    @Column(name = "Link_to_Service_en")
+    public String link_to_service_en;
+    @Column(name = "Link_to_Service_fi")
+    public String link_to_service_fi;
+    @Column(name = "Privacy_Policy_en")
+    public String privacy_policy_en;
+    @Column(name = "Privacy_Policy_fi")
+    public String privacy_policy_fi;
+    @Column(name = "Link_to_User_Guide_en")
+    public String link_to_user_guide_en;
+    @Column(name = "Link_to_User_Guide_fi")
+    public String link_to_user_guide_fi;
+    @Column(name = "Terms_of_Use_en")
+    public String terms_of_use_en;
+    @Column(name = "Terms_of_Use_fi")
+    public String terms_of_use_fi;
+    @Column(name = "Link_to_Training_Material_en")
+    public String link_to_training_material_en;
+    @Column(name = "Link_to_Training_Material_fi")
+    public String link_to_finnish_training_material_fi;
+    @Column(name = "How_to_Obtain_the_Service_en")
+    public String how_to_obtain_the_service_en;
+    @Column(name = "How_to_Obtain_the_Service_fi")
+    public String how_to_obtain_the_service_fi;
     @Column(name = "End_User_Guidance")
-public String end_user_guidance;
-    @Column(name = "End_User_Guidance_in_English")
-public String end_user_guidance_in_english;
-    @Column(name = "End_User_Guidance_in_Finnish")
-public String end_user_guidance_in_finnish;
-    @Column(name = "How_to_Obtain_the_Service_in_English")
-public String how_to_obtain_the_service_in_english;
-    @Column(name = "How_to_Obtain_the_Service_in_Finnish")
-public String how_to_obtain_the_service_in_finnish;
+    public String end_user_guidance;
+    @Column(name = "End_User_Guidance_en")
+    public String end_user_guidance_en;
+    @Column(name = "End_User_Guidance_fi")
+    public String end_user_guidance_fi;
+    @Column(name = "Link_to_SLA_en")
+    public String link_to_sla_en;
+    @Column(name = "Link_to_SLA_fi")
+    public String link_to_sla_fi;
     @Column(name = "Interoperable_Services")
-public String interoperable_services;
+    public String interoperable_services;
     @Column(name = "Interoperable_services_URNs")
-public String interoperable_services_urns;
+    public String interoperable_services_urns;
+    @Column(name = "Topics_for_Website_en")
+    public String topics_for_website_en;
+    @Column(name = "Topics_for_Website_fi")
+    public String topics_for_website_fi;
+    @Column(name = "Customer_Segment_en")
+    public String customer_segmen_en;
+     @Column(name = "Customer_Segment_fi")
+    public String customer_segment_fi;
+     @Column(name = "End_User_Groups_en")
+    public String  end_User_Groups_en;
+     @Column(name = "End_User_Groups_fi")
+    public String  end_User_Groups_fi;
+    @Column(name = "Purpose_of_the_Service_en")
+    public String purpose_of_the_service_en;
+    @Column(name = "Purpose_of_the_Service_fi")
+    public String purpose_of_the_service_fi;
     @Column(name = "Interoperable_Services_Websites")
 public String interoperable_services_websites;
-    @Column(name = "Link_to_Service_in_English")
-public String link_to_service_in_english;
-    @Column(name = "Link_to_Servicein_Finnish")
-public String link_to_servicein_finnish;
-    @Column(name = "Link_to_SLA_in_English")
-public String link_to_sla_in_english;
-    @Column(name = "Link_to_SLA_in_Finnish")
-public String link_to_sla_in_finnish;
-    @Column(name = "Link_to_English_Training_Material")
-public String link_to_english_training_material;
-    @Column(name = "Link_to_English_User_Guide")
-public String link_to_english_user_guide;
-    @Column(name = "Link_to_Finnish_Training_Material")
-public String link_to_finnish_training_material;
-    @Column(name = "Link_to_Finnish_User_Guide")
-public String link_to_finnish_user_guide;
-    @Column(name = "Name_in_English")
-public String name_in_english;
-    @Column(name = "Name_in_Finnish")
-public String name_in_finnish;
     @Column(name = "Persistant_Identifier")
 public String persistant_identifier;
-    @Column(name = "Privacy_Policy_in_English")
-public String privacy_policy_in_english;
-    @Column(name = "Privacy_Policy_in_Finnish")
-public String privacy_policy_in_finnish;
-    @Column(name = "Protection_level")
-public String protection_level;
-    @Column(name = "Purpose_of_the_Service")
-public String purpose_of_the_service;
-    @Column(name = "Short_Name")
-public String short_name;
+    @Column(name = "Protection_level_max_en")
+public String protection_level_max_en;
+    @Column(name = "Protection_level_max_fi")
+    public String protection_level_max_fi;
+    @Column(name = "Protection_level_min_en")
+    public String protection_level_min_en;
+    @Column(name = "Protection_level_min_fi")
+    public String protection_level_min_fi;
     @Column(name = "Support_Email_address")
 public String support_email_address;
     @Column(name = "Servicecatalogue_snowkey")
 public String servicecatalogue_key;
-    @Column(name = "Tagline_in_English")
-public String tagline_in_english;
-    @Column(name = "Tagline_in_Finnish")
-public String tagline_in_finnish;
-    @Column(name = "Technical_requirements_in_English")
-public String technical_requirements_in_english;
-    @Column(name = "Technical_requirements_in_Finnish")
-public String technical_requirements_in_finnish;
-    @Column(name = "Terms_of_Use_in_English")
-public String terms_of_use_in_english;
-    @Column(name = "Terms_of_Use_in_Finnish")
-public String terms_of_use_in_finnish;
-    @Column(name = "Topics_for_Website")
-public String topics_for_website;
-    @Column(name = "URN")
-public String urn;
+
+
     @Column(name = "Website")
 public String website;
+
 
 }
