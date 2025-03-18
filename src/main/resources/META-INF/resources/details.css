@@ -1,0 +1,27 @@
+td {text-align: left;
+    border: 1px solid #dddddd;
+    padding: 0.02in 0.02in 0.01in 0.02in;
+  vertical-align: top;
+}
+
+p  {text-align: left;
+  orphans: 2;
+  widows: 2;
+}
+
+.col1 {
+  width: 29%;
+}
+
+.col2 {
+  width: 20%;
+}
+
+.col3 {
+  width: 11%;
+}
+
+.col4 {
+  width: 40%;
+}
+
