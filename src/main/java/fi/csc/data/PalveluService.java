@@ -1,5 +1,6 @@
 package fi.csc.data;
 
+import fi.csc.data.model.Palvelu;
 import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped

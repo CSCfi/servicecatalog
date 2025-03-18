@@ -11,7 +11,7 @@ import org.jboss.resteasy.annotations.jaxrs.PathParam;
 
 import java.util.List;
 
-@Path("/v1/services")
+@Path("/v2/services")
 @Transactional
 public class ServiceResource {
 
@@ -27,7 +27,7 @@ public class ServiceResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     //@CacheResult(cacheName = "palvelu-cache")
-    public List<Palvelu> all() {
+    public List<PalveluC> all() {
         ApplicationLifecycle.päivitä();
         return ApplicationLifecycle.siivottuNone;
     }
@@ -41,9 +41,9 @@ public class ServiceResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     //@CacheResult(cacheName = "palvelu-cache")
-    public List<Palvelu> kamalaa() {
+    public List<PalveluC> kamalaa() {
         ApplicationLifecycle.päivitä();
-        return ApplicationLifecycle.siivottuBasic;
+        return ApplicationLifecycle.html;
     }
 
     /**
@@ -55,7 +55,7 @@ public class ServiceResource {
     @Path("/{urn}")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Palvelu getPalvelu(@PathParam("urn") String urn) {
+    public PalveluC getPalvelu(@PathParam("urn") String urn) {
         //return ps.getByURN(urn);
         return ApplicationLifecycle.htsp.get(urn);
     }
