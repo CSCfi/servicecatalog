@@ -8,8 +8,11 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import org.jboss.resteasy.annotations.jaxrs.PathParam;
+import io.vertx.core.http.HttpServerRequest;
+import jakarta.ws.rs.core.Context;
 
 import java.util.List;
+import java.util.Optional;
 
 @Path("/v2/services")
 @Transactional
@@ -17,6 +20,9 @@ public class ServiceResource {
 
     @Inject
     PalveluService ps;
+
+    @Context
+    HttpServerRequest request;
 
     /**
      * Lista CSC palveluista
@@ -28,7 +34,7 @@ public class ServiceResource {
     @Produces(MediaType.APPLICATION_JSON)
     //@CacheResult(cacheName = "palvelu-cache")
     public List<PalveluC> all() {
-        ApplicationLifecycle.päivitä();
+        ApplicationLifecycle.päivitä(request.headers().get("User-Agent"));
         return ApplicationLifecycle.siivottuNone;
     }
 
@@ -42,7 +48,7 @@ public class ServiceResource {
     @Produces(MediaType.APPLICATION_JSON)
     //@CacheResult(cacheName = "palvelu-cache")
     public List<PalveluC> kamalaa() {
-        ApplicationLifecycle.päivitä();
+        ApplicationLifecycle.päivitä(request.headers().get("User-Agent"));
         return ApplicationLifecycle.html;
     }
 

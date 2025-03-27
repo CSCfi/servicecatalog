@@ -81,21 +81,20 @@ public String tou_specific_en;
 
     public List<String> interoperable_services_urns;
 
-    public String topics_for_website_en;
+    public List<String> topics_for_website_en;
+    public List<String> topics_for_website_fi;
 
-    public String topics_for_website_fi;
+    public List<String> customer_segment_en;
 
-    public String customer_segment_en;
-
-    public String customer_segment_fi;
+    public List<String> customer_segment_fi;
 
     public List<String> end_user_groups_en;
 
     public List<String> end_user_groups_fi;
 
-    public String purpose_of_the_service_en;
+    public List<String> purpose_of_the_service_en;
 
-    public String purpose_of_the_service_fi;
+    public List<String> purpose_of_the_service_fi;
 
     public List<String> interoperable_services_websites;
 
@@ -156,14 +155,14 @@ this.tou_specific_en = p.tou_specific_en;
         this.link_to_sla_fi = p.link_to_sla_fi;
         this.interoperable_services = listaksi(p.interoperable_services);
         this.interoperable_services_urns = listaksi(p.interoperable_services_urns);
-        this.topics_for_website_en = p.topics_for_website_en;
-        this.topics_for_website_fi = p.topics_for_website_fi;
-        this.customer_segment_en = p.customer_segment_en;
-        this.customer_segment_fi = p.customer_segment_fi;
+        this.topics_for_website_en = pilkutlistaksi(p.topics_for_website_en);
+        this.topics_for_website_fi = pilkutlistaksi(p.topics_for_website_fi);
+        this.customer_segment_en = pilkutlistaksi(p.customer_segment_en);
+        this.customer_segment_fi = pilkutlistaksi(p.customer_segment_fi);
         this.end_user_groups_en = pilkutlistaksi(p.end_user_groups_en);
         this.end_user_groups_fi = pilkutlistaksi(p.end_user_groups_fi);
-        this.purpose_of_the_service_en = p.purpose_of_the_service_en;
-        this.purpose_of_the_service_fi = p.purpose_of_the_service_fi;
+        this.purpose_of_the_service_en = pilkutlistaksi(p.purpose_of_the_service_en);
+        this.purpose_of_the_service_fi = pilkutlistaksi(p.purpose_of_the_service_fi);
         this.interoperable_services_websites = listaksi(p.interoperable_services_websites);
         this.persistent_identifier = p.persistent_identifier;
         this.protection_level_max_en = p.protection_level_max_en;

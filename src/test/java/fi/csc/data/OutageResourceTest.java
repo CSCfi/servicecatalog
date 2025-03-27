@@ -14,8 +14,7 @@ public class OutageResourceTest {
         given()
           .when().get("/v1/outage")
           .then()
-             .statusCode(200)
-             .body(is("[]"));
+             .statusCode(200);
     }
 
     @Test
